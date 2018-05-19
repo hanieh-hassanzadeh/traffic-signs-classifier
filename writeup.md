@@ -46,7 +46,7 @@ Then, I defined the variables needed in Tensorflow functions.
 
 ### Model architecture
 
-The architecture is a LeNet, which consists of:
+The architecture is a LeNet (introduced in the previous lectures), which consists of:
 
 Layer 1: Convolutional
     Activation
@@ -64,7 +64,7 @@ Layer 5: Fully Connected
 
 ### Model properties
 
-To train the model, I consider the batch size of 300, due to a larger dataset size. The initial epochs are 100, however I found out that only 30 would be enough for this perpose. Adam Optimizer method is used to minimize the loss function. The leaning rate is set to 0.0001. 
+To train the model, I consider the batch size of 300, due to a larger dataset size. The initial epochs are 100, however I found out that only 30 would be enough for this perpose. Adam Optimizer method is used to minimize the loss function. The leaning rate is set to 0.0001. I was inspired by the explanations of the other sudents, when completing this part of the code.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
