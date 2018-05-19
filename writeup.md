@@ -1,4 +1,4 @@
-# **Traffic Sign lassification and Recognition**
+# **Traffic Sign classification and Recognition**
 
 For this project, I performed bellow steps:
 ---
