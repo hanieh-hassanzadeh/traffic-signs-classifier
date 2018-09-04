@@ -4,15 +4,20 @@ For this project, I performed bellow steps:
 
 ## Step 0: Load The Data
 
-First off, I loaded the data from the corresponding files and creates the training, validation, and test feature and label sets.
+First off, I load the data from the corresponding files, and create the training, validation, and test feature and label sets.
 
 
 ## Step 1: Data exploration
 Exploring the data sets reveals that, 
+
 Number of training examples   = 34799
+
 Number of validation examples = 4410
+
 Number of testing examples    = 12630
+
 Image data shape  = (32, 32, 3)
+
 Number of classes = 43
 
 ### Visualization of the training dataset
@@ -21,36 +26,36 @@ A sample image of each 43 sign types is shown as the first visualization practic
 
 ![image](https://github.com/hanieh-hassanzadeh/traffic-signs-classifier/blob/master/examples/visul1.png)
 
-The following histogram demonstrated how many images of each sign type exists in the training data set.
+The following histogram demonstrates how many images of each sign type exists in the training data set.
 
 ![histogram](https://github.com/hanieh-hassanzadeh/traffic-signs-classifier/blob/master/examples/visul2.png)
 
 
 ## Step 2: Data augmentation
 
-The first analyses showed that the data size is not big enough. Moreover, the images needed more generalization. Therefore two augmentation techniques are performed on training set, which increase the dataset size from 34799 to 626382. These techniques are %80 central scaling and 7 rotations within the interval of [-18, 18] degrees. 
+The first analyses shows that the data size is not big enough. Moreover, the images needed more generalization. Therefore, two augmentation techniques are performed on training set, which increase the dataset size from 34799 to 626382. These techniques are %80 central scaling and 7 rotations within the interval of [-18, 18] degrees. 
 
 
 ## Step 3: Pre-Processing by gray-scaling and normalization
 
-Then the images were converted into gray scales and the image arrays normalized from [0, 255] intervals to the standard form of [-1, 1] interval.
+Then the images are converted into gray scales and the image arrays are normalized from [0, 255] intervals to the standard form of [-1, 1] interval.
 
 
 ### Prepare data to be fed into Tensorflow functions
 
-The array shapes of all three features data sets needed to be change to have another dimension of size 1 as the last dimension to be compatible with Tensorflow functions.
+The array shapes of all three features datasets needed to be changed to have another dimension of size 1 as the last dimension (to be compatible with Tensorflow functions).
 
 
 ### Define Tensorflow variables
 
-Then, I defined the variables needed in Tensorflow functions.
+Then, I defin the variables needed in Tensorflow functions.
 
 
 ## Step 4: Modeling
 
 ### Model architecture
 
-The architecture is a LeNet, which consists of:
+I use LeNEt architecture which consists of:
 
 Layer 1: Convolutional - Input: 32x32x1, Output: 28x28x6
     Activation
@@ -107,10 +112,10 @@ I performed the same pre-processing steps on these images. Here are the final im
 
 There are some conditions that may make the prediction of the new images a bit challenging. 
 - Most of the images that I found on the web are brighter than the dataset images.
-- The new images could have different orientations/rotation than the images in the dataset, due to misplacing the signs on the streets.
+- The new images could have different orientations/rotation than the images in the dataset, due to misplacements of the signs on the streets.
 - The new images were sometimes very zoomed in or zoomed out.
-- The new signs were only a small art of a bigger image.
-_ Some images on the web are distorted, due to the angle of the camera which took that picture.
+- The new signs were only a small part of a bigger image.
+_ Some images on the web are distorted, due to the angle of the camera.
 
 
 To overcome these challenges, usually the data augmentation methods (such as scaling, rotation, etc.) can help to generalize the training set and lead towards more accurate predictions. 
